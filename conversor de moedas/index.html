@@ -4,29 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conversor de Moedas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
+    <div class="icon-header">
+      <i class="fa-solid fa-coins fa-2x"></i>
+    </div>
     <h1>Conversor de Moedas</h1>
-    
-    <input type="number" id="valor" placeholder="Digite o valor" />
+    <form id="form-conversor">
+      <label for="valor"><i class="fa-solid fa-money-bill"></i> Valor a converter:</label>
+      <input type="number" id="valor" placeholder="Digite o valor a converter" required />
 
-    <select id="moedaOrigem">
-      <option value="BRL">Real (BRL)</option>
-      <option value="USD">Dólar (USD)</option>
-      <option value="EUR">Euro (EUR)</option>
-    </select>
+      <label for="moedaOrigem"><i class="fa-solid fa-arrow-right-arrow-left"></i> Moeda de Origem:</label>
+      <select id="moedaOrigem">
+        <option value="BRL">Real (BRL)</option>
+        <option value="USD">Dólar (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+      </select>
 
-    <select id="moedaDestino">
-      <option value="USD">Dólar (USD)</option>
-      <option value="EUR">Euro (EUR)</option>
-      <option value="BRL">Real (BRL)</option>
-    </select>
+      <label for="moedaDestino"><i class="fa-solid fa-arrow-up-right-dots"></i> Moeda de Destino:</label>
+      <select id="moedaDestino">
+        <option value="USD">Dólar (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="BRL">Real (BRL)</option>
+      </select>
 
-    <button id="converter">Converter</button>
-
+      <button id="converter" type="submit"><i class="fa-solid fa-exchange-alt"></i> Converter</button>
+    </form>
     <p id="resultado"></p>
+    <div class="footer">
+      <span>&copy; 2025 Conversor de Moedas. Projeto acadêmico.</span>
+    </div>
   </div>
 
   <script src="script.js"></script>
